@@ -33,7 +33,7 @@ const dbname = "mgsqlite.db"
 func dbpath() string {
 	path, ok := os.LookupEnv("DBPATH")
 	if ok {
-		return filepath.Join(path)
+		return filepath.Join(path, dbname)
 	}
 	return dbname
 }
